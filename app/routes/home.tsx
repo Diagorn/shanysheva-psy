@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import portrait from '../assets/images/ekaterina-shamysheva.jpg';
 import { Flower, QuietRoom, TelegramIcon } from '../components/marks';
 import { navigation, questions, requests, site, steps } from '../content';
 import styles from './home.module.css';
@@ -144,9 +145,9 @@ export default function Home() {
               Индивидуальные консультации для взрослых
             </p>
             <h1 id="hero-title">
-              Быть собой.
+              Быть собой
               <br />
-              <em>В своём темпе.</em>
+              <em>В своём темпе</em>
             </h1>
             <p className={styles.heroLead}>
               Можно не оставаться в одиночку с тем, что сейчас непросто.
@@ -174,39 +175,89 @@ export default function Home() {
         </section>
 
         <section
-          id="about"
-          className={styles.about}
-          aria-labelledby="about-title"
+          id="approach"
+          className={styles.approach}
+          aria-labelledby="approach-title"
         >
-          <div className={`${styles.container} ${styles.aboutInner}`}>
+          <div className={`${styles.container} ${styles.approachInner}`}>
             <div>
-              <p className={styles.eyebrow}>Обо мне и подходе</p>
-              <h2 id="about-title">
-                Можно прийти
+              <p className={styles.eyebrow}>О подходе</p>
+              <h2 id="approach-title">
+                Сталкиваться с трудностями
                 <br />
-                <em>без готовых ответов.</em>
+                <em>— это нормально</em>
               </h2>
-              <Flower className={styles.aboutFlower} />
+              <Flower className={styles.approachFlower} />
             </div>
-            <div className={styles.aboutCopy}>
+            <div className={styles.approachCopy}>
               <p className={styles.largeText}>
                 Начать можно с того, что волнует тебя сейчас.
               </p>
               <p>
-                Я начинаю практику в гештальт-подходе и работаю индивидуально со
-                взрослыми. На встречах мы обращаем внимание на чувства,
-                потребности и отношения — и исследуем, как ты проживаешь свой
-                опыт.
+                Гештальт-терапия — это подход, в котором мы обращаем внимание на
+                чувства, телесные ощущения и потребности здесь и сейчас.
+                Исследуем, как ты строишь отношения с собой и другими.
+              </p>
+              <p>
+                Этот подход может подойти тебе, если сложно понять свои желания,
+                сказать «нет» или в отношениях повторяются похожие трудности.
+                Вместе будем замечать привычные реакции и искать новые способы
+                действовать — в твоём темпе.
               </p>
               <p>
                 Не нужно подбирать «правильные» слова или заранее знать, что
                 делать дальше. Можно говорить о том, что трудно, замечать важное
                 и постепенно знакомиться с собой.
               </p>
-              <div className={styles.aboutSignature}>
-                <span className={styles.signatureLine} />
-                <span>{site.name}</span>
-              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="about"
+          className={`${styles.container} ${styles.profileSection}`}
+          aria-labelledby="about-title"
+        >
+          <h2 id="about-title">Обо мне</h2>
+          <div className={styles.profileInner}>
+            <div className={styles.portraitFrame}>
+              <img
+                src={portrait}
+                alt="Екатерина Шамышева"
+                width={3024}
+                height={4032}
+                loading="lazy"
+                decoding="async"
+                className={styles.portrait}
+              />
+            </div>
+            <div className={styles.profileCopy}>
+              <p>
+                Я начинаю практику в гештальт-подходе и работаю индивидуально со
+                взрослыми.
+              </p>
+              <ul aria-label="Образование и личный опыт терапии">
+                <li>
+                  Окончила программу профессиональной переподготовки МИП «Основы
+                  психологической науки и практики».
+                </li>
+                <li>
+                  Учусь в магистратуре МИП по программе «Гештальт-терапия в
+                  психологическом консультировании».
+                </li>
+                <li>Окончила первую ступень МГИ, сейчас учусь на второй.</li>
+                <li>Прохожу специализацию по работе с женщинами.</li>
+                <li>Четыре года в личной терапии.</li>
+                <li>Три года в групповой терапии на тему отношений.</li>
+              </ul>
+              <p className={styles.profileEveryday}>
+                По первому образованию я айтишница и продолжаю работать
+                системным аналитиком. При этом я поняла, что хочу помогать
+                людям. Мне интересно, как каждый из нас по-своему чувствует,
+                выбирает и строит отношения. Иногда на этом пути становится
+                непросто — и мне хочется помогать человеку находить опору и свои
+                способы преодолевать трудности.
+              </p>
             </div>
           </div>
         </section>
@@ -276,7 +327,7 @@ export default function Home() {
             <div className={styles.sessionHeading}>
               <p className={styles.eyebrow}>Формат и стоимость</p>
               <h2 id="sessions-title">
-                Время, посвящённое <em>тебе.</em>
+                Время, посвящённое <em>тебе</em>
               </h2>
               <p>
                 Каждая консультация длится 50 минут. Выбери формат, который тебе
@@ -297,7 +348,7 @@ export default function Home() {
                   возможность побыть наедине.
                 </p>
                 <div className={styles.price}>
-                  500 <span>₽</span>
+                  1&nbsp;000 <span>₽</span>
                   <span className={styles.priceUnit}>/ встреча</span>
                 </div>
                 <a
@@ -324,12 +375,9 @@ export default function Home() {
                   согласуем в Telegram.
                 </p>
                 <div className={styles.price}>
-                  700 <span>₽</span>
+                  2&nbsp;000 <span>₽</span>
                   <span className={styles.priceUnit}>/ встреча</span>
                 </div>
-                <p className={styles.rentNote}>
-                  Плюс оплата кабинета · место по договорённости
-                </p>
                 <a
                   href={site.telegram}
                   className={styles.sessionLink}
@@ -356,7 +404,7 @@ export default function Home() {
             <h2 id="first-title">
               Начнём
               <br />
-              <em>со знакомства.</em>
+              <em>со знакомства</em>
             </h2>
             <p>Не обязательно сначала собраться с мыслями, чтобы написать.</p>
             <span className={styles.handLine} aria-hidden="true" />
@@ -385,7 +433,7 @@ export default function Home() {
             <h2 id="faq-title">
               Возможно,
               <br />
-              <em>ты думаешь об этом.</em>
+              <em>ты думаешь об этом</em>
             </h2>
           </div>
           <div className={styles.questions}>
@@ -412,7 +460,7 @@ export default function Home() {
             <h2 id="contact-title">
               Давай начнём
               <br />
-              <em>с разговора.</em>
+              <em>с разговора</em>
             </h2>
             <p>
               Напиши мне в Telegram. Обсудим твой запрос
